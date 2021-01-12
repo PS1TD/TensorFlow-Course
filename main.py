@@ -3,6 +3,9 @@ import numpy
 import matplotlib.pyplot as plt
 from tensorflow import keras
 
+# Check if gpu is working
+tf.config.list_physical_devices("GPU")
+
 # Loading dataset
 fashion_mnist = keras.datasets.fashion_mnist
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
